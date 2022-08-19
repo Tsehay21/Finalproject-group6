@@ -20,54 +20,89 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 
+    <!--- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--- End Navigation Bar -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1>Create Task</h1>
+                <div class="horizontal-line-1-copy-3"></div>
+                <form>
+                    <div class="form-group">
+                        <label for="taskname">Task</label>
+                        <input class="text-input-1" type="text" class="form-control" id="taskname"
+                            aria-describedby="taskassigned" placeholder="Task name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assigned">Assigned person</label>
+                        <input class="text-input-3" list="users" name="users" type="text" class="form-control"
+                            id="assigned" placeholder="Assigned person"><datalist id="users">
+                            <option value="Joseph">
+                            <option value="Nhat">
+                            <option value="Hilina">
+                            <option value="Tsehay">
+                        </datalist>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Task description</label><br>
+                        <textarea class="text-area-1" id="description" name="message" rows="10" cols="30"
+                            placeholder="Task description (optional)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="Done">Done</option>
+                            <option value="Yes">Pending</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="button-1-copy-3">Add Task</button>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="date">Due date:</label>
+                    <iframe class="calendar-1"
+                        src="https://calendar.google.com/calendar/embed?src=nb2as72anh5c4fl80dodnstjlc%40group.calendar.google.com&ctz=America%2FNew_York"
+                        style="border: 0" width="800" height="600" frameborder="0" scrolling="no" id="date"></iframe>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+<!-- Card Section -->
 
 
-    <h1>Create Task</h1>
-    <form>
-        <div class="form-group">
-            <label for="taskname">Task</label>
-            <input class="text-input-1" type="text" class="form-control" id="taskname" aria-describedby="taskassigned"
-                placeholder="Task name" required>
-        </div>
-        <div class="form-group">
-            <label for="assigned">Assigned person</label>
-            <input class="text-input-3" list="users" name="users" type="text" class="form-control" id="assigned"
-                placeholder="Assigned person"><datalist id="users">
-                <option value="Joseph">
-                <option value="Nhat">
-                <option value="Hilina">
-                <option value="Tsehay">
-            </datalist>
-        </div>
-        <div class="form-group">
-            <label for="description">Task description</label><br>
-            <textarea class="text-area-1" id="description" name="message" rows="10" cols="30"
-                placeholder="Task description (optional)"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="date">Due date:</label>
-            <iframe class="calendar-1"
-                src="https://calendar.google.com/calendar/embed?src=nb2as72anh5c4fl80dodnstjlc%40group.calendar.google.com&ctz=America%2FNew_York"
-                style="border: 0" width="800" height="600" frameborder="0" scrolling="no" id="date"></iframe>
-        </div>
-        <div class="form-group">
-            <label for="status">Status</label>
-            <select id="status">
-                <option value="Done">Done</option>
-                <option value="Yes">Pending</option>
-            </select>
-        </div>
-        <button type="submit" class="button-1-copy-3">Add Task</button>
-    </form>
-
-
-    <div class=" taskcard">
+    <div class="taskcard">
         <h3>TASK CARD</h3>
     </div>
     <div class="row">
         <div class="col-sm-6">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body rectangle-1 ">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.
                     </p>
@@ -82,7 +117,7 @@
         </div>
         <div class="col-sm-6">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body rectangle-1 ">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.
                     </p>
@@ -97,7 +132,7 @@
         </div>
         <div class="col-sm-6">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body rectangle-1 ">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.
                     </p>
@@ -112,7 +147,7 @@
         </div>
         <div class="col-sm-6">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body rectangle-1">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.
                     </p>
