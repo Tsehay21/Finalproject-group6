@@ -150,8 +150,8 @@ h3 {
 @media screen and (max-width: 850px) {
     .cardcontainer {
         flex-direction: column;
-        justify-content: center;
-        width: 70%;
+        align-items: center;
+        width: 50%;
         margin: auto;
     }
 
