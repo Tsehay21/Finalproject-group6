@@ -134,8 +134,9 @@ body {
     text-align: center;
 }
 
-.card {
-    width: 100%;
+.cardbox {
+    padding: 0;
+    margin-left: 10px;
 }
 
 .card-body {
@@ -151,6 +152,7 @@ h3 {
         flex-direction: column;
         justify-content: center;
         width: 70%;
+        margin: auto;
     }
 
     .col-sm {
