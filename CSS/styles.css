@@ -1,3 +1,4 @@
+
 * {
     /* border: 1px solid red; */
 }
@@ -7,9 +8,23 @@ body {
     color: white;
 }
 
+
 .createTask,
 .dueDate {
     border-bottom: #7a7a7a 1px solid;
+
+/* .navtitle {
+    color: #021f54;
+}
+
+.horizontal-line-1-copy-3 {
+    width: 100%;
+    height: 1px;
+    opacity: 30%;
+    border-color: #7a7a7a;
+    border-width: 1px;
+    border-style: solid; */
+
 }
 
 .calendar-1 {
@@ -129,6 +144,7 @@ body {
     font-size: 14px;
     text-align: center;
 }
+
 
 
 /* task card section */
@@ -343,5 +359,30 @@ button:focus {
     }
     .pignose-calendar-week {
         font-size: 12px;
+
+/* .cardbox {
+    padding: 0;
+    margin-left: 10px;
+}
+
+.card-body {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+    .cardcontainer {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+    }
+
+    .col-sm {
+        margin: 20px; */
+
     }
 }
