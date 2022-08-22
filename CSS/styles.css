@@ -1,9 +1,19 @@
+
+* {
+    /* border: 1px solid red; */
+}
+
 body {
     background-color: #021f54 !important;
     color: white;
 }
 
-.navtitle {
+
+.createTask,
+.dueDate {
+    border-bottom: #7a7a7a 1px solid;
+
+/* .navtitle {
     color: #021f54;
 }
 
@@ -13,7 +23,8 @@ body {
     opacity: 30%;
     border-color: #7a7a7a;
     border-width: 1px;
-    border-style: solid;
+    border-style: solid; */
+
 }
 
 .calendar-1 {
@@ -134,7 +145,222 @@ body {
     text-align: center;
 }
 
-.cardbox {
+
+
+/* task card section */
+
+.card-body {
+    width: 100%;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.card-day {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* .card .buttons {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.card-day i {
+    font-size: 25px;
+}
+
+
+/* css of calender arrow */
+
+.pignose-calendar .icon-arrow-left:before {
+    content: '<';
+}
+
+.pignose-calendar .icon-arrow-right:before {
+    content: '>';
+}
+
+.myCalendar .pignose-calendar {
+    margin: 15px 0;
+}
+
+.pignose-calendar .pignose-calendar-unit {
+    height: 2.8em;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-month {
+    margin-bottom: 0;
+}
+
+.pignose-calendar .pignose-calendar-header {
+    margin-top: 5px;
+}
+
+.pignose-calendar .pignose-calendar-body {
+    padding: 0 1.2rem;
+}
+
+
+/*end calender  */
+
+
+/* test */
+
+section.main {
+    padding: 0;
+    width: 96%;
+}
+
+section.sideBar {
+    width: 4%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+section.sideBar .sideBar__detail {
+    text-align: center;
+    position: fixed;
+    font-size: 35px;
+    width: 4%;
+}
+
+section.sideBar .sideBar__detail .myButton {
+    height: 56px;
+    width: 100%;
+    background-color: #d4e3fc;
+}
+
+section.sideBar div ul {
+    padding: 0;
+    margin-top: 45px;
+}
+
+section.sideBar div li {
+    display: block;
+    list-style: none;
+    line-height: 80px;
+}
+
+section.sideBar div li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 33px;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/************************* responsive */
+
+@media screen and (max-width: 991.98px) {
+    /************************ sidebar */
+    section.sideBar,
+    section.sideBar .sideBar__detail {
+        width: 7%;
+    }
+    section.sideBar div li a {
+        font-size: 30px;
+    }
+    /* end sidebar */
+    section.main {
+        width: 93%;
+    }
+    form,
+    .myCalendar {
+        padding-left: 20px;
+    }
+    .pignose-calendar {
+        width: 70vw;
+        max-width: unset;
+    }
+    .taskcard h3 {
+        text-align: center;
+    }
+    .card .card-body {
+        width: 50%;
+    }
+    .card {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768.98px) {
+    section.sideBar,
+    section.sideBar .sideBar__detail {
+        width: 9%;
+    }
+    section.sideBar div li a {
+        font-size: 28px;
+    }
+    section.sideBar div ul {
+        margin-top: 20px;
+    }
+    /* end sidebar */
+    section.main {
+        width: 91%;
+    }
+    form,
+    .myCalendar {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 576.98px) {
+    section.sideBar,
+    section.sideBar .sideBar__detail {
+        width: 10%;
+    }
+    section.sideBar div li a {
+        font-size: 28px;
+    }
+    section.sideBar div ul {
+        margin-top: 20px;
+    }
+    /* end sidebar */
+    section.main {
+        width: 90%;
+    }
+    .text-area-1,
+    .text-input-1 {
+        width: 70vw;
+    }
+    .card .card-body {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    section.sideBar,
+    section.sideBar .sideBar__detail {
+        width: 13%;
+    }
+    section.sideBar div li a {
+        font-size: 25px;
+    }
+    /* end sidebar */
+    section.main {
+        width: 87%;
+    }
+    .pignose-calendar {
+        width: 100%;
+    }
+    .pignose-calendar .pignose-calendar-unit a {
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+    .pignose-calendar-week {
+        font-size: 12px;
+
+/* .cardbox {
     padding: 0;
     margin-left: 10px;
 }
@@ -156,6 +382,7 @@ h3 {
     }
 
     .col-sm {
-        margin: 20px;
+        margin: 20px; */
+
     }
 }
