@@ -1,19 +1,18 @@
-
-* {
-    /* border: 1px solid red; */
-}
-
 body {
     background-color: #021f54 !important;
     color: white;
+    font-size: 16px;
 }
 
+input,
+textarea {
+    outline: none;
+}
 
 .createTask,
 .dueDate {
     border-bottom: #7a7a7a 1px solid;
-
-/* .navtitle {
+    /* .navtitle {
     color: #021f54;
 }
 
@@ -24,7 +23,6 @@ body {
     border-color: #7a7a7a;
     border-width: 1px;
     border-style: solid; */
-
 }
 
 .calendar-1 {
@@ -46,7 +44,7 @@ body {
     height: 40px;
     padding: 4px 8px 4px 8px;
     background: #ffffff;
-    color: #c0c0c0;
+    /* color: #c0c0c0; */
     border-color: #232323;
     border-width: 1px;
     border-style: solid;
@@ -62,7 +60,7 @@ body {
     height: 32px;
     padding: 4px 8px 4px 8px;
     background: #ffffff;
-    color: #c0c0c0;
+    /* color: #c0c0c0; */
     border-color: #232323;
     border-width: 1px;
     border-style: solid;
@@ -78,7 +76,7 @@ body {
     height: 100px;
     padding: 4px 8px 4px 8px;
     background: #ffffff;
-    color: #c0c0c0;
+    /* color: #c0c0c0; */
     border-color: #232323;
     border-width: 1px;
     border-style: solid;
@@ -146,7 +144,6 @@ body {
 }
 
 
-
 /* task card section */
 
 .card-body {
@@ -162,12 +159,6 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
-
-/* .card .buttons {
-    display: flex;
-    justify-content: space-between;
-} */
 
 .card-day i {
     font-size: 25px;
@@ -251,6 +242,11 @@ section.sideBar div li a {
     text-decoration: none;
     color: whitesmoke;
     font-size: 33px;
+    transition: .5s;
+}
+
+section.sideBar div li a:hover {
+    color: #42a5f5;
 }
 
 button:focus {
@@ -359,8 +355,7 @@ button:focus {
     }
     .pignose-calendar-week {
         font-size: 12px;
-
-/* .cardbox {
+        /* .cardbox {
     padding: 0;
     margin-left: 10px;
 }
@@ -383,6 +378,5 @@ h3 {
 
     .col-sm {
         margin: 20px; */
-
     }
 }
