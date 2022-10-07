@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./CSS/styles.css">
 
 
-    <title>Document</title>
+    <title>toDo List</title>
 </head>
 
 <body>
@@ -48,56 +48,6 @@
                             </li>
                         </ul>
 
-
-    <!--- Navigation Bar -->
-<!--     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><span class="navtitle">Navbar</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-
-    <!--- End Navigation Bar -->
-    <!--Task-->
-
-<!--     <div class="container text-light">
-        <div class="row taskcontainer">
-            <div class="col-sm">
-                <h1>Create Task</h1>
-                <div class="horizontal-line-1-copy-3"></div><br>
-                <form>
-                    <div class="form-group">
-                        <label for="taskname">Task</label>
-                        <input class="text-input-1" type="text" class="form-control" id="taskname"
-                            aria-describedby="taskassigned" placeholder="Task name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="assigned">Assigned person</label>
-                        <input class="text-input-3" list="users" name="users" type="text" class="form-control"
-                            id="assigned" placeholder="Assigned person"><datalist id="users">
-                            <option value="Joseph">
-                            <option value="Nhat">
-                            <option value="Hilina">
-                            <option value="Tsehay">
-                        </datalist> -->
-
                     </div>
                 </div>
             </section>
@@ -110,7 +60,7 @@
                     <a class="navbar-brand ml-3" href="#"><i class="fa fa-image"></i></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
@@ -147,8 +97,6 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 mb-5 mb-lg-0">
                             <h1 class="createTask">Create Task</h1>
-                            <!-- i removed the div below bcs i can use property border bottom for h1 above -->
-                            <!-- <div class="horizontal-line-1-copy-3"></div> -->
                             <form>
                                 <div class="form-group">
                                     <label for="taskname">Task</label><br>
@@ -157,222 +105,59 @@
 
                                 <div class="form-group">
                                     <label for="assigned">Assigned person</label><br>
-                                    <input class="text-input-3" list="assigned" name="users" type="text" class="form-control" placeholder="Assigned person">
-                                    <datalist id="assigned">
+                                    <input class="text-input-3" list="users" name="users" type="text" class="form-control" placeholder="Assigned person" id="assigned" required>
+                                    <datalist id="users">
                              <option value="Joseph">
                              <option value="Nhat">
                              <option value="Hilina">
                             <option value="Tsehay">
                                 <option value="Kien">
-
                                     </datalist>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="description">Task description</label><br>
-                                    <textarea class="text-area-1" id="description" name="message" rows="10" cols="30" placeholder="Task description (optional)"></textarea>
+                                    <textarea class="text-area-1" id="description" name="message" rows="10" cols="30" placeholder="Task description (optional)" required></textarea>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" required>
                                     <label for="status">Status</label>
                                     <select id="status">
 
-<!--                     <div class="form-group">
-                        <label for="status">Status</label>
-                        <select id="status"> -->
+                                        <option value="Pending">Pending</option>
+                                      <option value="Done">Done</option>
 
-                            <option value="Done">Done</option>
-                            <option value="Yes">Pending</option>
-                        </select>
+                                    </select>
                                 </div>
-                                <button type="submit" class="button-1-copy-3">Add Task</button>
+                                <div>
+                                    <p>Due day: <input type="date" id="dueDay"></p>
+                                </div>
+                                <button type="button" id="addItem" class="button-1-copy-3">Add Task</button>
+                            </form>
                         </div>
+                        <!-- <input type="button"> -->
                         <div class="col-12 col-lg-6 mb-5 mb-lg-0">
-                            <h1 class="dueDate">Due date</h1>
+                            <h1 class="dueDate">Calendar</h1>
 
                             <div class="form-group">
-                                <!-- <label for="date">Due date:</label> -->
-                                <!-- <iframe class="calendar-1" src="https://calendar.google.com/calendar/embed?src=nb2as72anh5c4fl80dodnstjlc%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" id="date"></iframe>
-                    <input type="date"> -->
+
                                 <div class="calendar myCalendar"></div>
                             </div>
                         </div>
-                        </form>
+
                     </div>
 
 
                     <!-- Card Section -->
 
 
-                    <div class="taskcard">
+                    <div class="taskcard mt-0 mt-lg-5">
                         <h3>TASK CARD</h3>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-3 my-4 my-lg-0">
-                            <div class="card">
-                                <div class="card-body rectangle-1 ">
-                                    <h5 class="card-title">Task name</h5>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <p class="card-text">Description
-                                    </p>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <div class="buttons"> <button class="bootstrap-red-button-normal-1 mr-3">Pending </button>
-                                        <button class="bootstrap-green-button-pressed-1">Done</button>
-                                    </div>
-                                    <hr>
-                                    <div class="card-day">
-                                        <span>August 19th 2022</span><i class="fa fa-calendar-week"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 my-4 my-lg-0">
-                            <div class="card">
-                                <div class="card-body rectangle-1 ">
-                                    <h5 class="card-title">Task name</h5>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <p class="card-text">Description
-                                    </p>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <div class="buttons"> <button class="bootstrap-red-button-normal-1 mr-3">Pending </button>
-                                        <button class="bootstrap-green-button-pressed-1">Done</button>
-                                    </div>
-                                    <hr>
-                                    <div class="card-day">
-                                        <span>August 19th 2022</span><i class="fa fa-calendar-week"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 my-4 my-lg-0">
-                            <div class="card">
-                                <div class="card-body rectangle-1 ">
-                                    <h5 class="card-title">Task name</h5>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <p class="card-text">Description
-                                    </p>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <div class="buttons"> <button class="bootstrap-red-button-normal-1 mr-3">Pending </button>
-                                        <button class="bootstrap-green-button-pressed-1">Done</button>
-                                    </div>
-                                    <hr>
-                                    <div class="card-day">
-                                        <span>August 19th 2022</span><i class="fa fa-calendar-week"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 my-4 my-lg-0">
-                            <div class="card">
-                                <div class="card-body rectangle-1 ">
-                                    <h5 class="card-title">Task name</h5>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <p class="card-text">Description
-                                    </p>
-                                    <p class="card-text">Assigned person
-                                    </p>
-                                    <div class="buttons"> <button class="bootstrap-red-button-normal-1 mr-3">Pending </button>
-                                        <button class="bootstrap-green-button-pressed-1">Done</button>
-                                    </div>
-                                    <hr>
-                                    <div class="card-day">
-                                        <span>August 19th 2022</span><i class="fa fa-calendar-week"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                    <div class="row" id="cardTask">
+                        <!-- render html code here -->
+                        <h3>You have nothing to do now! </h3>
                     </div>
-
-<!--                     <button type="submit" class="button-1-copy-3">Add Task</button>
-                </form>
-            </div>
-            <div class="col-sm">
-                <div class="form-group">
-                    <h1>Due date:</h1>
-                    <div class="horizontal-line-1-copy-3"></div><br>
-                    <iframe class="calendar-1"
-                        src="https://calendar.google.com/calendar/embed?src=nb2as72anh5c4fl80dodnstjlc%40group.calendar.google.com&ctz=America%2FNew_York"
-                        style="border: 0" width="800" height="600" frameborder="0" scrolling="no" id="date"></iframe>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!--End Task-->
-    <!--Task card-->
-
-<!--     <div class="taskcard">
-        <h3>TASK CARD</h3>
-    </div>
-    <div class="row cardcontainer">
-        <div class="col-sm cardbox">
-            <div class="card">
-                <div class="card-body rectangle-1">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <button class="bootstrap-red-button-normal-1">Pending </button>
-                    <button class="bootstrap-green-button-pressed-1">Done</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm cardbox">
-            <div class="card">
-                <div class="card-body rectangle-1 ">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <button class="bootstrap-red-button-normal-1">Pending </button>
-                    <button class="bootstrap-green-button-pressed-1">Done</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm cardbox">
-            <div class="card">
-                <div class="card-body rectangle-1 ">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <button class="bootstrap-red-button-normal-1">Pending </button>
-                    <button class="bootstrap-green-button-pressed-1">Done</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm cardbox">
-            <div class="card">
-                <div class="card-body rectangle-1">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <button class="bootstrap-red-button-normal-1">Pending </button>
-                    <button class="bootstrap-green-button-pressed-1">Done</button> -->
 
                 </div>
             </section>
@@ -386,7 +171,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
     <script src="./JS/moment.js"></script>
     <!-- calendar -->
     <script src="./JS/pignose.calendar.min.js"></script>
@@ -398,16 +182,9 @@
         });
     </script>
 
+    <script type="module" src="JS/main.js"></script>
 
-    <!--End Task card-->
-    <!--JS Code-->
 
-<!--     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script> -->
 
 </body>
 
