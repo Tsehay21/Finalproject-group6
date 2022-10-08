@@ -99,12 +99,12 @@
                             <h1 class="createTask">Create Task</h1>
                             <form>
                                 <div class="form-group">
-                                    <label for="taskname">Task</label><br>
+                                    <label for="taskname">Task <span id="warningTitle" class="noteText text-danger ml-3 d-none">Please fill out this field</span></label><br>
                                     <input class="text-input-1" type="text" class="form-control" id="taskname" aria-describedby="taskassigned" placeholder="Task name" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="assigned">Assigned person</label><br>
+                                    <label for="assigned">Assigned person<span id="warningPerson" class="noteText text-danger ml-3 d-none">Please fill out this field</span></label><br>
                                     <input class="text-input-3" list="users" name="users" type="text" class="form-control" placeholder="Assigned person" id="assigned" required>
                                     <datalist id="users">
                              <option value="Joseph">
@@ -116,7 +116,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="description">Task description</label><br>
+                                    <label for="description">Task description<span id="warningDescription" class="noteText text-danger ml-3 d-none">Please fill out this field</span></label><br>
                                     <textarea class="text-area-1" id="description" name="message" rows="10" cols="30" placeholder="Task description (optional)" required></textarea>
                                 </div>
 
@@ -130,7 +130,8 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <p>Due day: <input type="date" id="dueDay"></p>
+
+                                    <p>Due day: <input type="date" id="dueDay"><span id="warningDate" class="noteText text-danger ml-3 d-none">Please select a date</span></p>
                                 </div>
                                 <button type="button" id="addItem" class="button-1-copy-3">Add Task</button>
                             </form>
@@ -156,7 +157,7 @@
                     </div>
                     <div class="row" id="cardTask">
                         <!-- render html code here -->
-                        <h3>You have nothing to do now! </h3>
+                        <!-- <h3>You have nothing to do now! </h3> -->
                     </div>
 
                 </div>
