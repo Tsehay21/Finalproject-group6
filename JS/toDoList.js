@@ -3,7 +3,7 @@ export class ToDoList {
         this.toDoList = [];
     }
     addToDo(toDo) {
-        this.toDoList.push(toDo);
+        this.toDoList.push(toDo)
     }
     renderToDo() {
         let content = '';
@@ -23,10 +23,12 @@ export class ToDoList {
                                     </p>
                                     <p class="card-text">Description: <span class='text-dark ml-2'>${item.taskDescription}</span>
                                     </p>
-                                    <div class="buttons">
-                                        ${htmlStatus}
-                                    </div>
+                                    <select id="status">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Done">Done</option>
+                                    </select>
                                     <hr>
+                                  
                                     <div class="card-day">
                                         <span>${item.dueDay}</span><i class="fa fa-calendar-week"></i>
                                         <button class='delete' id='delete' data-index=${index} onclick="removeTodo(event)" >delete</button>
@@ -39,7 +41,7 @@ export class ToDoList {
             `;
             return preValue;
         }, '');
-        console.log(content);
+        // console.log(content);
         return content;
     }
     deleteToDo(index) {

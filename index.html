@@ -22,147 +22,76 @@
 </head>
 
 <body>
+    <header>
+        <h2>
+            To Do Application
+        </h2>
+    </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <!------------------------- sidebar -->
-            <section class="sideBar">
-                <div class="sideBar__detail">
-                    <div class="myButton">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#test" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                  </button></div>
-                    <div class="collapse navbar-collapse" id="test">
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fa fa-search"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-home"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-comment-dots"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-cog"></i></a>
-                            </li>
-                        </ul>
+    <!--- main section -->
+    <section class="main">
 
-                    </div>
-                </div>
-            </section>
-            <!-- test -->
+        <div class="container-fluid mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-5 mb-5 mb-lg-0 ml-4">
+                    <h1 class="createTask">Create Task</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="taskname">Task <span id="warningTitle" class="noteText text-danger ml-3 d-none">Please fill out this field</span></label><br>
+                            <input class="text-input-1" type="text" class="form-control" id="taskname" aria-describedby="taskassigned" placeholder="Task name" required>
+                        </div>
 
-            <!--------------------- end sidebar -->
-            <!--- Navigation Bar -->
-            <section class="main">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-                    <a class="navbar-brand ml-3" href="#"><i class="fa fa-image"></i></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-                     </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div>
-
-                </nav>
-                <!--- End Navigation Bar -->
-                <div class="container-fluid mb-5">
-                    <div class="row">
-                        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
-                            <h1 class="createTask">Create Task</h1>
-                            <form>
-                                <div class="form-group">
-                                    <label for="taskname">Task</label><br>
-                                    <input class="text-input-1" type="text" class="form-control" id="taskname" aria-describedby="taskassigned" placeholder="Task name" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="assigned">Assigned person</label><br>
-                                    <input class="text-input-3" list="users" name="users" type="text" class="form-control" placeholder="Assigned person" id="assigned" required>
-                                    <datalist id="users">
+                        <div class="form-group">
+                            <label for="assigned">Assigned person<span id="warningPerson" class="noteText text-danger ml-3 d-none">Please fill out this field</span></label><br>
+                            <input class="text-input-3" list="users" name="users" type="text" class="form-control" placeholder="Assigned person" id="assigned" required>
+                            <datalist id="users">
                              <option value="Joseph">
                              <option value="Nhat">
                              <option value="Hilina">
                             <option value="Tsehay">
                                 <option value="Kien">
                                     </datalist>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="description">Task description</label><br>
-                                    <textarea class="text-area-1" id="description" name="message" rows="10" cols="30" placeholder="Task description (optional)" required></textarea>
-                                </div>
-
-                                <div class="form-group" required>
-                                    <label for="status">Status</label>
-                                    <select id="status">
-
-                                        <option value="Pending">Pending</option>
-                                      <option value="Done">Done</option>
-
-                                    </select>
-                                </div>
-                                <div>
-                                    <p>Due day: <input type="date" id="dueDay"></p>
-                                </div>
-                                <button type="button" id="addItem" class="button-1-copy-3">Add Task</button>
-                            </form>
-                        </div>
-                        <!-- <input type="button"> -->
-                        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
-                            <h1 class="dueDate">Calendar</h1>
-
-                            <div class="form-group">
-
-                                <div class="calendar myCalendar"></div>
-                            </div>
                         </div>
 
-                    </div>
+                        <div class="form-group">
+                            <label for="description">Task description<span id="warningDescription" class="noteText text-danger ml-3 d-none">Please fill out this field</span></label><br>
+                            <textarea class="text-area-1" id="description" name="message" rows="10" cols="30" placeholder="Task description (optional)" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="dueDay">Due day: <span class="text-danger ml-3 d-none" id="warningDate" >Please select due day</span></label> <br>
+                            <input type="date" id="dueDay" class="mb-2">
+                        </div>
 
-
-                    <!-- Card Section -->
-
-
-                    <div class="taskcard mt-0 mt-lg-5">
-                        <h3>TASK CARD</h3>
-                    </div>
-                    <div class="row" id="cardTask">
-                        <!-- render html code here -->
-                        <h3>You have nothing to do now! </h3>
-                    </div>
-
+                        <button type="button" id="addItem" class="button-1-copy-3">Add Task</button>
+                    </form>
                 </div>
-            </section>
+                <!-- <input type="button"> -->
+                <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+                    <h1 class="dueDate">Calendar</h1>
+
+                    <div class="form-group">
+
+                        <div class="calendar myCalendar"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Card Section -->
+
+
+            <div class="taskcard mt-0 mt-lg-5">
+                <h3>TASK CARD</h3>
+                <div class="row" id="cardTask">
+                    <!-- render html code here -->
+                </div>
+            </div>
+
+
         </div>
-    </div>
+    </section>
+
 
     <!-- js code -->
 
@@ -174,17 +103,17 @@
     <script src="./JS/moment.js"></script>
     <!-- calendar -->
     <script src="./JS/pignose.calendar.min.js"></script>
-    <script>
+    <!-- <script>
         $(function() {
             $('.calendar').pignoseCalendar({
                 theme: 'blue' // light, dark, blue
             });
         });
-    </script>
+    </script> -->
 
     <script type="module" src="JS/main.js"></script>
 
-
+    <!-- <script src="./JS/test.js"></script> -->
 
 </body>
 
