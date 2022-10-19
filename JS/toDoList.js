@@ -3,7 +3,7 @@ export class ToDoList {
         this.toDoList = [];
     }
     addToDo(toDo) {
-        this.toDoList.push(toDo);
+        this.toDoList.push(toDo)
     }
     renderToDo() {
         let content = '';
@@ -41,7 +41,7 @@ export class ToDoList {
             `;
             return preValue;
         }, '');
-        console.log(content);
+        // console.log(content);
         return content;
     }
     deleteToDo(index) {
